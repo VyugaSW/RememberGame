@@ -1,0 +1,134 @@
+.game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    min-height: 40rem;
+}
+
+.game-container .game-info{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: aliceblue;
+    z-index: 2;
+    min-height: 30rem;
+    max-height: 60rem;
+    border-radius: 10px;
+    gap: 3rem;
+    flex: 1;
+}
+
+.game-info__el{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.game-info__el .value{
+    font-size: 1.3rem;
+}
+
+.game-container .game-field-container{
+    flex: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.game-field-8, .game-field-16, .game-field-32{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(10px,1fr));
+    gap: 1rem;
+}
+
+.game-field-16, .game-field-32{
+    grid-template-columns: repeat(8,minmax(10px,1fr));
+}
+
+.pause-btn{
+    text-align: center;
+    width: 100%;
+    padding: 0.4rem;
+    border-radius: 2%;
+    font-size: 1.6rem;
+    color: var(--menu-color);
+    border: 1px solid #37eedd;
+    background-color: var(--background-menu-option);
+    transition: 0.4s;
+    margin-bottom: -1rem;
+}
+
+.pause-btn:hover{
+    background-color: var(--background-menu-option-hover);
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.pause-btn:active{
+    background-color: var(--background-menu-option-active);
+}
+
+.result-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.result-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.result-info .label{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.result-container .title{
+    color: var(--menu-title-color);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+.result-save-btn, .result-btn{
+    display: flex;
+    text-decoration: none;
+    color: var(--menu-color);
+    justify-content: center;
+    width: 70%;
+    padding: 1rem;
+    font-size: 2rem;
+    border: 1px solid var(--form-button-border);
+    border-radius: 1.5rem;
+    background-color: var(--background-menu-option);
+    transition: 0.4s;
+}
+
+.result-btn{
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.result-save-btn:hover, .result-btn:hover{
+    background-color: var(--background-menu-option-hover);
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.result-save-btn:active,.result-btn:active{
+    background-color: var(--background-menu-option-active);
+}

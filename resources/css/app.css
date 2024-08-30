@@ -1,0 +1,145 @@
+*{
+    font-family:'Courier New', Courier, monospace;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.container{
+    width: 100%;
+}
+
+.spinner, .spinner-big{
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: 0.5rem solid;
+    border-color: #37eedd transparent;
+    border-radius: 50%;
+    animation: loading 1.6s infinite;
+}
+
+.spinner-big{
+    position: absolute;
+    top: 30%;
+    left: 43%;
+    width: 7rem;
+    height: 7rem;
+    border: 2rem solid;
+    border-color: #37eedd transparent;
+}
+
+@keyframes loading{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+:root{
+    /*light theme tokens*/
+    --background-header-light: aliceblue;
+    --background-header-option-light: aliceblue;
+    --background-header-option-hover-light: #a9f8f1;
+    --background-header-option-active-light: #37eedd;
+    --header-menu-color-light: black;
+
+    --menu-color-light: black;
+    --background-menu-option-light: aliceblue;
+    --background-menu-option-hover-light: #a9f8f1;
+    --background-menu-option-active-light: #37eedd;
+    --menu-title-color-light: #a9f8f1;
+
+    --background-modal-light: aliceblue;
+    --background-modal-overlay-light: rgba(0,0,0,0.75);
+    --background-modal-close-button-light:  aliceblue;
+    --background-modal-close-button-hover-light: #a9f8f1;
+    --background-modal-close-button-active-light: #37eedd;
+
+    --form-input-background-light: aliceblue;
+    --form-input-border-light: #37eedd;
+    --form-input-border-focus-light: transparent;
+    --form-input-background-focus-light: #37eedd;
+    --form-button-border-light: #37eedd;
+    --form-error-color-light: red;
+    --form-color-light: black;
+
+    --info-color-light: black;
+    --info-title-color-light: #a9f8f1;
+
+}
+
+[data-theme="light"]{
+    --background-header: var(--background-header-light);
+    --background-header-option: var(--background-header-option-light);
+    --background-header-option-hover: var(--background-header-option-hover-light);
+    --background-header-option-active: var(--background-header-option-active-light);
+    --header-menu-color: var(--header-menu-color-light);
+    
+    --menu-color: var(--menu-color-light);
+    --background-menu-option: var(--background-menu-option-light);
+    --background-menu-option-hover: var(--background-menu-option-hover-light);
+    --background-menu-option-active: var(--background-menu-option-active-light);
+    --menu-title-color: var(--menu-title-color-light);
+
+    --background-modal: var(--background-modal-light);
+    --background-modal-overlay: var(--background-modal-overlay-light);
+    --background-modal-close-button: var(--background-modal-close-button-light);
+    --background-modal-close-button-hover: var(--background-modal-close-button-hover-light);
+    --background-modal-close-button-active: var(--background-modal-close-button-active-light);
+
+    --form-input-background:  var(--form-input-background-light);
+    --form-input-border: var(--form-input-border-light);
+    --form-input-border-focus: var(--form-input-border-focus-light);
+    --form-input-background-focus: var(--form-input-background-focus-light);
+    --form-button-border: var(--form-button-border-light);
+    --form-error-color: var(--form-error-color-light);
+    --form-color: var(--form-color-light);
+
+    --info-color: var(--info-color-light);
+    --info-title-color: var(--info-title-color-light);
+
+}
+
+/*Content background classes*/
+.m-bk{
+    position: relative;
+    background-image: url('../img/image_background.png');
+    background-size: cover;
+    min-height: 46rem;
+    max-height: 60rem;
+}
+
+.snow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 50' style='enable-background:new 0 0 50 50%3B' xml:space='preserve'%3E%3Cstyle type='text/css'%3E.st1%7Bopacity:0.3%3Bfill:%23FFFFFF%3B%7D.st3%7Bopacity:0.1%3Bfill:%23FFFFFF%3B%7D%3C/style%3E%3Ccircle class='st1' cx='5' cy='8' r='1'/%3E%3Ccircle class='st1' cx='38' cy='3' r='1'/%3E%3Ccircle class='st1' cx='12' cy='4' r='1'/%3E%3Ccircle class='st1' cx='16' cy='16' r='1'/%3E%3Ccircle class='st1' cx='47' cy='46' r='1'/%3E%3Ccircle class='st1' cx='32' cy='10' r='1'/%3E%3Ccircle class='st1' cx='3' cy='46' r='1'/%3E%3Ccircle class='st1' cx='45' cy='13' r='1'/%3E%3Ccircle class='st1' cx='10' cy='28' r='1'/%3E%3Ccircle class='st1' cx='22' cy='35' r='1'/%3E%3Ccircle class='st1' cx='3' cy='21' r='1'/%3E%3Ccircle class='st1' cx='26' cy='20' r='1'/%3E%3Ccircle class='st1' cx='30' cy='45' r='1'/%3E%3Ccircle class='st1' cx='15' cy='45' r='1'/%3E%3Ccircle class='st1' cx='34' cy='36' r='1'/%3E%3Ccircle class='st1' cx='41' cy='32' r='1'/%3E%3C/svg%3E");
+    background-position: 0px 0px;
+}
+  
+.snow div {
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 50 50' style='enable-background:new 0 0 50 50%3B' xml:space='preserve'%3E%3Cstyle type='text/css'%3E.st1%7Bopacity:0.7%3Bfill:%23FFFFFF%3B%7D.st3%7Bopacity:0.1%3Bfill:%23FFFFFF%3B%7D%3C/style%3E%3Ccircle class='st3' cx='4' cy='14' r='1'/%3E%3Ccircle class='st3' cx='43' cy='3' r='1'/%3E%3Ccircle class='st3' cx='31' cy='30' r='2'/%3E%3Ccircle class='st3' cx='19' cy='23' r='1'/%3E%3Ccircle class='st3' cx='37' cy='22' r='1'/%3E%3Ccircle class='st3' cx='43' cy='16' r='1'/%3E%3Ccircle class='st3' cx='8' cy='45' r='1'/%3E%3Ccircle class='st3' cx='29' cy='39' r='1'/%3E%3Ccircle class='st3' cx='13' cy='37' r='1'/%3E%3Ccircle class='st3' cx='47' cy='32' r='1'/%3E%3Ccircle class='st3' cx='15' cy='4' r='2'/%3E%3Ccircle class='st3' cx='9' cy='27' r='1'/%3E%3Ccircle class='st3' cx='30' cy='9' r='1'/%3E%3Ccircle class='st3' cx='25' cy='15' r='1'/%3E%3Ccircle class='st3' cx='21' cy='45' r='2'/%3E%3Ccircle class='st3' cx='42' cy='45' r='1'/%3E%3C/svg%3E");
+    background-position: 0px 0px;
+}
+
+.snow-animation{
+    animation: animatedBackground 8s linear infinite;
+}
+
+.snow-animation div{
+    animation: animatedBackground 13s linear infinite;
+}
+
+@keyframes animatedBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0px 300px;
+    }
+}

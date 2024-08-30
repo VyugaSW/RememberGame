@@ -1,0 +1,118 @@
+.sign-container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.sign-container .form-container{
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: var(--form-color);
+}
+
+.form-btn, .close-btn, .close-btn-opt{
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    background-color: var(--background-modal-close-button);
+    border: none;
+    border-radius: 0.3rem;
+    transition: 0.3s;
+}
+
+.form-btn{
+    margin-top: 2rem;
+    border: 1px var(--form-button-border) solid;
+    width: 10rem
+}
+
+.close-btn, .close-btn-opt{
+    padding: 0.5rem;
+    font-size: 1.55rem;
+    position: absolute;
+    top: -4%;
+    right: -2%;
+}
+
+.close-btn:hover, .form-btn:hover, .close-btn-opt:hover{
+    background-color: var(--background-modal-close-button-hover);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.close-btn:active, .form-btn:active, .close-btn-opt:active{
+    background-color: var(--background-modal-close-button-active);
+}
+
+.close-btn-opt{
+    top: 0.3%;
+    right: 0.3%;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: right;
+}
+
+.form-group .input-error{
+    color: var(--form-error-color);
+}
+
+.form-control{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+}
+
+.form-control label{
+    font-size: 1.5rem;
+}
+
+.form-control input{
+    padding: 0.4rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    height: 2rem;
+    width: 60%;
+    background-color: var(--form-input-background);
+    border: 1px var(--form-input-border) solid;
+    border-radius: 0.6rem;
+    transition: 0.25s;
+}
+
+.form-control input:hover{
+    transform: scale(1.016);
+}
+
+.form-control input:focus{
+    background-color: var(--form-input-background-focus);
+    border: 1px var(--form-input-border-focus) solid;
+    transform: scale(1.016);
+    outline: none;
+}
+
+.message{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--form-color);
+}
+
+.form-notif{
+    position: absolute;
+    top: -15%;
+    left: 0%;
+    color: var(--form-color);
+}
+
+.flex{
+    display: flex;
+    gap: 2rem
+}

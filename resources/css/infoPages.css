@@ -1,0 +1,11 @@
+.text-container{
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem;
+    color: var(--info-color)
+}
+.text-container .title{
+    color: var(--info-title-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
