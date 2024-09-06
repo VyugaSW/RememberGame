@@ -9,24 +9,8 @@ import axios from "axios";
 import Registration from "./SignUp.jsx";
 import appPath from "../appPath.js";
 import SignIn from "./SignIn.jsx";
+import { saveResult } from "./AjaxRequests.jsx";
 
-const saveResult = (usid, typeid, mins, secs, scor, setMessage = null) => {
-  console.log(usid,typeid,mins,secs,scor);
-  axios
-  .post(appPath('api/saverecord'), 
-    {
-      userid: usid, 
-      typegameid: typeid,
-      minutes: mins, 
-      seconds: secs, 
-      scores: scor
-    })
-  .then((response) => {
-    if(setMessage != null)
-      setMessage(response.data.message)
-    return response.data.status;
-  });
-}
 
 export default function Game(props) {
     const [cards, setCards] = useState(() => {
@@ -142,12 +126,14 @@ export default function Game(props) {
         }
     }
   
+    const pad = (str,n) => (str+n).slice(-2);
+
     const modalResultsContent = (
       <div className="result-container">
         <h2 className="title">Your results</h2>
         <div className="result-info">
           <div className="label">Time:</div>
-          <div className="value">{time[0]}:{time[1]}</div>
+          <div className="value">{pad('0',time[0])}:{pad('0',time[1])}</div>
         </div>
         <div className="result-info">
           <div className="label">Score:</div>

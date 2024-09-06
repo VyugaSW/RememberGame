@@ -27,6 +27,7 @@
 .line{
     width: 0.1rem;
     border: none;
+    margin: 0 0.09rem;
     background-color: var(--header-menu-color);
 }
 

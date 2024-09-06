@@ -13,6 +13,7 @@
 .menu-option{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 30%;
     padding: 1rem;
     border-radius: 1.5rem;

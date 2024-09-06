@@ -1,0 +1,25 @@
+.records-tables-container{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.records-tables{
+    width: 100%;
+    table-layout: fixed;
+    font-size: 1.3rem;
+    border-collapse: collapse;
+    border: 2px solid black;
+    margin-bottom: 1rem;
+}
+
+.records-tables td, .records-tables th{
+  text-align: center;
+}
+
+.records-tables th, .records-tables td {
+  border: 1px solid black;
+  padding: 8px 10px;
+}

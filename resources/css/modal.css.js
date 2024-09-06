@@ -18,6 +18,7 @@ const styles = {
     margin: 'auto',
     border: 'none',
     borderRadius: '0.3rem',
+    padding: '0'
   },
 } 
 
@@ -43,6 +44,7 @@ export const stylesResult = {
     margin: 'auto',
     border: 'none',
     borderRadius: '0.3rem',
+    padding: '0'
   },
 } 
 
@@ -62,9 +64,10 @@ export const stylesSignUp = {
   content: {
     background: 'var(--background-modal)',
     width: '60%',
-    height: '78%',
+    height: '84%',
     margin: 'auto',
     border: 'none',
     borderRadius: '0.3rem',
+    padding: '0'
   },
 } 

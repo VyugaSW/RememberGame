@@ -15,6 +15,10 @@
     color: var(--form-color);
 }
 
+.form-container{
+    padding: 2rem;
+}
+
 .form-btn, .close-btn, .close-btn-opt{
     padding: 0.8rem;
     font-size: 1.4rem;
@@ -30,28 +34,24 @@
     width: 10rem
 }
 
-.close-btn, .close-btn-opt{
+.close-btn{
     padding: 0.5rem;
     font-size: 1.55rem;
     position: absolute;
-    top: -4%;
-    right: -2%;
+    top: 0.3%;
+    right: 0.3%;
 }
 
-.close-btn:hover, .form-btn:hover, .close-btn-opt:hover{
+.close-btn:hover, .form-btn:hover{
     background-color: var(--background-modal-close-button-hover);
     cursor: pointer;
     transform: scale(1.05);
 }
 
-.close-btn:active, .form-btn:active, .close-btn-opt:active{
+.close-btn:active, .form-btn:active{
     background-color: var(--background-modal-close-button-active);
 }
 
-.close-btn-opt{
-    top: 0.3%;
-    right: 0.3%;
-}
 
 .form-group{
     display: flex;
@@ -76,7 +76,7 @@
     font-size: 1.5rem;
 }
 
-.form-control input{
+.form-control input, .form-control select{
     padding: 0.4rem;
     font-size: 1.4rem;
     font-weight: bold;
@@ -88,15 +88,35 @@
     transition: 0.25s;
 }
 
-.form-control input:hover{
+.form-control select{
+    height: 2.5rem;
+    width: 70%;
+}
+
+.form-control select option{
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.form-control input:hover,.form-control select:hover{
     transform: scale(1.016);
 }
+
+.form-control select:hover {
+   cursor: pointer;
+}
+
 
 .form-control input:focus{
     background-color: var(--form-input-background-focus);
     border: 1px var(--form-input-border-focus) solid;
     transform: scale(1.016);
     outline: none;
+}
+
+.form-control select:focus{
+    outline: none;
+    transform: scale(1.016);
 }
 
 .message{

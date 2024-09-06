@@ -14,6 +14,7 @@ import '../css/modalGameOptions.css';
 import '../css/infoPages.css';
 import '../css/game.css';
 import '../css/card.scss';
+import '../css/recordsTables.css';
 
 const rootElement = document.getElementById('app');
 const root = ReactDOM.createRoot(rootElement);

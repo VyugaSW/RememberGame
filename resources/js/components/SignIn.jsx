@@ -76,7 +76,7 @@ export default class SignIn extends React.Component{
         return (
             <div className="sign-container">
                 <button className='close-btn' onClick={this.props.closeOnClick}>✖</button>
-                <div className='form-container'>
+                <div className='form-container singIn-container'>
                     <div className="form-group">
                         <div className="form-control">
                             <label htmlFor="login">Login or Email:</label>

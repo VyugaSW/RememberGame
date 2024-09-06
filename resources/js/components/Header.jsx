@@ -13,7 +13,7 @@ export default function Header(props){
 
     const openModalSignIn = () => {
         setModalSingInIsOpen(true);
-        styles.content.height = '54%';
+        styles.content.height = '63%';
         styles.content.width = '60%';
     };
     
@@ -23,7 +23,7 @@ export default function Header(props){
 
     const openModalSignUp = () => {
         setModalSingUpIsOpen(true);
-        styles.content.height = '78%';
+        styles.content.height = '88%';
         styles.content.width = '60%';
     };
     

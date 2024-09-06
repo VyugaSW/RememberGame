@@ -17,7 +17,7 @@ body{
     height: 2rem;
     background-color: transparent;
     border: 0.5rem solid;
-    border-color: #37eedd transparent;
+    border-color: var(--spinner-color) transparent;
     border-radius: 50%;
     animation: loading 1.6s infinite;
 }
@@ -29,7 +29,7 @@ body{
     width: 7rem;
     height: 7rem;
     border: 2rem solid;
-    border-color: #37eedd transparent;
+    border-color: var(--spinner-color) transparent;
 }
 
 @keyframes loading{
@@ -69,6 +69,8 @@ body{
     --info-color-light: black;
     --info-title-color-light: #a9f8f1;
 
+    --spinner-color-light: #37eedd;
+
 }
 
 [data-theme="light"]{
@@ -100,6 +102,7 @@ body{
 
     --info-color: var(--info-color-light);
     --info-title-color: var(--info-title-color-light);
+    --spinner-color: var(--spinner-color-light);
 
 }
 

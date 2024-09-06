@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Hash;
+use DB;
 use Illuminate\Http\Request;
 use App\Models\User;
 
@@ -91,5 +92,15 @@ class UserController extends Controller
             $user = User::where("email",$email)->first();
             return $user;
         }
+    }
+
+
+    //--------- [Get logins] -----------
+    function getLogins(Request $request){
+        $logins = DB::table('users')->where('login','like','%'.$request->login.'%')->take(5)->get();
+
+        if($logins)
+            return response()->json(["status"=> $this->status_code, 'success' => true, 'message'=> 'Fine.', 'data' => $logins]);
+        return response()->json(["status"=> "failed", 'success' => false, 'message'=> 'Something went wrong']);
     }
 }

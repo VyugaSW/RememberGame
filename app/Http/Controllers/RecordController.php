@@ -2,13 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use DB;
+use Illuminate\Database\Query\JoinClause;
 use Illuminate\Http\Request;
 use App\Models\Record;
 use App\Models\GameType;
+use App\Models\User;
+use App\Http\Controllers\GameTypeController;
 
 class RecordController extends Controller
 {
     private $status_code = 200;
+    private $paginateCount = 10;
+
+    // -------- [save record] ---------
     function saveRecord(Request $request){
         $record = new Record();
         
@@ -25,11 +32,18 @@ class RecordController extends Controller
         return response()->json(['status' => 'failed', 'success' => false, 'message' => 'Something went wrong :(']);
     }
 
-    function getTypeGame(Request $request){
-        $type = GameType::where('type', $request->type)->first();
-        if($type != null)
-            return response()->json(['status' => $this->status_code, 'success' => true, 'message' => 'Got', 'data' => $type->id]);
-        else
-            return response()->json(['status' => 'failed', 'success' => false, 'message' => 'Wrong type']);
+    // -------- [Records] ---------
+    function getRecords(Request $request){
+        $records = DB::table('records')
+                ->join('users','users.id','=','records.userid')
+                ->where('users.login','like', '%'.$request->userLogin.'%')
+                ->join('game_types','game_types.id','=','records.typegameid')
+                ->where('game_types.type','like','%'.$request->gameType.'%')
+                ->select('records.id','users.login','game_types.type','records.scores','records.minutes','records.seconds')
+                ->orderBy('scores', 'DESC')
+                ->paginate($this->paginateCount);
+        if($records)
+            return response()->json(['status' => $this->status_code, 'success' => true, 'message' => 'Fine.','data' => $records]);
+        return response()->json(['status' => 'failure', 'success' => false, 'message' => 'There are not any records','data' => $records]);
     }
 }
