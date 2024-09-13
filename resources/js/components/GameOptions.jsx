@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import appPath from "../appPath";
-import getTypes from "./AjaxRequests";
+import getTypes from "../getTypes";
 
 
 export default function GameOptions(props) {

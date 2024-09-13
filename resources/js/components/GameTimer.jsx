@@ -1,15 +1,16 @@
 import React from "react";
-
+import pad from "../pad";
 
 export default class GameTimer extends React.Component{
     constructor(props){
         super(props);
         this.state={
             hours: 0,
-            minutes: 0,
-            seconds: 0,
+            minutes: this.props.minutes ?? 0,
+            seconds: this.props.seconds ?? 0,
             timerId: '',
             isPaused: false,
+            interval: ''
         }
     };
 
@@ -30,7 +31,8 @@ export default class GameTimer extends React.Component{
                 this.props.onTime([this.state.minutes,this.state.seconds]);
             }
         }
-        setInterval(timing, 1000);
+        let interval = setInterval(timing, 1000);
+        this.setState({interval: interval});
     }
 
     clearTimer = () => {
@@ -44,8 +46,6 @@ export default class GameTimer extends React.Component{
     continueTimer = () => {
         this.setState({isPaused: false});
     }
-
-    pad = (str,n) => (str+n).slice(-2);
 
     componentDidMount(){
         this.startTimer();
@@ -62,7 +62,7 @@ export default class GameTimer extends React.Component{
                     
                 <h3>Current time</h3>
                 <div className="value">
-                    {this.pad('0',this.state.minutes)}:{this.pad('0',this.state.seconds)}
+                    {pad('0',this.state.minutes)}:{pad('0',this.state.seconds)}
                 </div>
             </>
         );

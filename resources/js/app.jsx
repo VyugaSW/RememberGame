@@ -15,6 +15,9 @@ import '../css/infoPages.css';
 import '../css/game.css';
 import '../css/card.scss';
 import '../css/recordsTables.css';
+import '../css/themesColors.css';
+import '../css/snow.css';
+import '../css/spinner.css';
 
 const rootElement = document.getElementById('app');
 const root = ReactDOM.createRoot(rootElement);

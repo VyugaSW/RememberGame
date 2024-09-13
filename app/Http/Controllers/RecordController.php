@@ -44,6 +44,21 @@ class RecordController extends Controller
                 ->paginate($this->paginateCount);
         if($records)
             return response()->json(['status' => $this->status_code, 'success' => true, 'message' => 'Fine.','data' => $records]);
-        return response()->json(['status' => 'failure', 'success' => false, 'message' => 'There are not any records','data' => $records]);
+        return response()->json(['status' => 'failure', 'success' => false, 'message' => 'There are not any records']);
+    }
+
+
+    // -------- [Get the highest record] ---------
+    function getHighScore(Request $request){
+        $highScore = DB::table('records')
+            ->join('game_types','game_types.id','=','records.typegameid')
+            ->where('records.userid','=', $request->userid)
+            ->where('game_types.type','=',$request->typeGame)
+            ->select('records.scores')
+            ->orderBy('scores','DESC')
+            ->first();
+        if($highScore)
+            return response()->json(['status' => $this->status_code, 'success' => true, 'message' => 'Fine.','data' => $highScore->scores]);
+        return response()->json(['status' => 'failure', 'success' => false, 'message' => 'There are not any records']);
     }
 }

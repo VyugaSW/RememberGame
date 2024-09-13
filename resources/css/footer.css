@@ -8,7 +8,7 @@
     text-align: center;
     padding: 1rem 2rem;
     gap: 2rem;
-    background-color: var(--background-header);
+    background-color: var(--footer-background-color);
     height: 100%;
     font-size: 1.15rem;
 
@@ -17,7 +17,7 @@
 .footer-ref{
     text-decoration: none;
     transition: 0.2s;
-    color: var(--header-menu-color)
+    color: var(--footer-menu-color)
 }
 
 .footer-ref:hover{

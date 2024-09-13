@@ -1,0 +1,25 @@
+.spinner, .spinner-big{
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: 0.5rem solid;
+    border-color: var(--spinner-color) transparent;
+    border-radius: 50%;
+    animation: loading 1.6s infinite;
+}
+
+.spinner-big{
+    position: absolute;
+    top: 30%;
+    left: 43%;
+    width: 7rem;
+    height: 7rem;
+    border: 2rem solid;
+    border-color: var(--spinner-color) transparent;
+}
+
+@keyframes loading{
+    to{
+        transform: rotate(360deg);
+    }
+}

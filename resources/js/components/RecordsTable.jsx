@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from 'axios';
 import appPath from '../appPath';
-import getTypes from "./AjaxRequests";
+import getTypes from "../getTypes";
+import pad from "../pad";
 
 export default function RecordsTable(props){
     const [records, setRecords] = useState([]);
-    const [loadedRecords, setLoadedRecords] = useState([]);
     const [message, setMessage] = useState('');
     const [gameType, setGameType] = useState('');
     const [userLogin, setUserLogin] = useState('');
@@ -26,8 +26,6 @@ export default function RecordsTable(props){
         if(!types.length)
             getTypes(setTypes, setIsLoading);
     },[])
-
-    const pad = (str,n) => (str+n).slice(-2);
 
     const getRecords = () => {
         setIsLoading(true);
@@ -67,18 +65,20 @@ export default function RecordsTable(props){
         setPage(page+1);
         setConcatRecords(true);
         setShouldRecordsUpdate(true);
-        setLoadedRecords(records);
     }
 
     const myRecordsOnClick = () => {
         setIsDisabledSearch(true);
+        setPage(1);
         setUserLogin(JSON.parse(localStorage.getItem('userData')).login);
         setShouldRecordsUpdate(true);
+        setConcatRecords(false);
     }
 
     const allRecordsOnClick = () =>{
         setIsDisabledSearch(false);
         setUserLogin('');
+        setPage(1);
         setShouldRecordsUpdate(true);
     }
 

@@ -1,0 +1,106 @@
+:root{
+    /*light theme tokens*/
+    --background-header-light: aliceblue;
+    --background-header-option-light: aliceblue;
+    --background-header-option-hover-light: #a9f8f1;
+    --background-header-option-active-light: #37eedd;
+    --header-menu-color-light: black;
+
+    --menu-color-light: black;
+    --background-menu-option-light: aliceblue;
+    --background-menu-option-hover-light: #a9f8f1;
+    --background-menu-option-active-light: #37eedd;
+    --menu-title-color-light: #a9f8f1;
+
+    --footer-background-color-ligt: aliceblue;
+    --footer-menu-color-light: black;
+
+    --background-modal-light: aliceblue;
+    --background-modal-overlay-light: rgba(0,0,0,0.75);
+    --background-modal-close-button-light:  aliceblue;
+    --background-modal-close-button-hover-light: #a9f8f1;
+    --background-modal-close-button-active-light: #37eedd;
+
+    --form-input-background-light: aliceblue;
+    --form-input-border-light: #37eedd;
+    --form-input-border-focus-light: transparent;
+    --form-input-background-focus-light: #37eedd;
+    --form-button-border-light: #37eedd;
+    --form-error-color-light: red;
+    --form-color-light: black;
+
+    --info-color-light: black;
+    --info-title-color-light: #a9f8f1;
+
+    --spinner-color-light: #37eedd;
+
+    --game-info-background-color-light: aliceblue;
+    --game-info-button-background-color-light: aliceblue;
+    --game-info-button-color-light: black;
+    --game-info-button-border-light: #37eedd;
+    --game-info-button-background-hover-light: #a9f8f1;
+    --game-info-button-background-active-light: #37eedd;
+
+    --result-title-color-light: #a9f8f1;
+
+    --card-shadow-light: #DEDEDE;
+
+    --records-table-border-light: black;
+    --records-table-color-light: black;
+
+}
+
+[data-theme="light"]{
+    --background-header: var(--background-header-light);
+    --background-header-option: var(--background-header-option-light);
+    --background-header-option-hover: var(--background-header-option-hover-light);
+    --background-header-option-active: var(--background-header-option-active-light);
+    --header-menu-color: var(--header-menu-color-light);
+    
+    --menu-color: var(--menu-color-light);
+    --background-menu-option: var(--background-menu-option-light);
+    --background-menu-option-hover: var(--background-menu-option-hover-light);
+    --background-menu-option-active: var(--background-menu-option-active-light);
+    --menu-title-color: var(--menu-title-color-light);
+
+    --footer-background-color: var(--footer-background-color-ligt);
+    --footer-menu-color: var(--footer-menu-color-light);
+
+    --background-modal: var(--background-modal-light);
+    --background-modal-overlay: var(--background-modal-overlay-light);
+    --background-modal-close-button: var(--background-modal-close-button-light);
+    --background-modal-close-button-hover: var(--background-modal-close-button-hover-light);
+    --background-modal-close-button-active: var(--background-modal-close-button-active-light);
+
+    --form-input-background:  var(--form-input-background-light);
+    --form-input-border: var(--form-input-border-light);
+    --form-input-border-focus: var(--form-input-border-focus-light);
+    --form-input-background-focus: var(--form-input-background-focus-light);
+    --form-button-border: var(--form-button-border-light);
+    --form-error-color: var(--form-error-color-light);
+    --form-color: var(--form-color-light);
+
+    --info-color: var(--info-color-light);
+    --info-title-color: var(--info-title-color-light);
+
+    --spinner-color: var(--spinner-color-light);
+
+    --game-info-background-color: var(--game-info-background-color-light);
+    --game-info-button-background-color: var( --game-info-button-background-color-light);
+    --game-info-button-color: var(--game-info-button-color-light);
+    --game-info-button-border: var(--game-info-button-border-light);
+    --game-info-button-background-hover: var(--game-info-button-background-hover-light);
+    --game-info-button-background-active: var(--game-info-button-background-active-light);
+    
+    --result-title-color: var(--result-title-color-light);
+    
+    --card-shadow: var(--card-shadow-light);
+
+    --records-table-border: var(--records-table-border-light);
+    --records-table-color: var(--records-table-color-light);
+
+}
+
+[data-theme="dark"]{
+    /*colors and nesseccary templates*/
+}

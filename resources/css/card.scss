@@ -2,7 +2,7 @@
     width: 8rem;
     height: 12rem;
     border-radius: 7px;
-    box-shadow: 2px 2px 4px 4px #DEDEDE;
+    box-shadow: 2px 2px 4px 4px var(--card-shadow);
     transition: 0.3s;
     transform-style: preserve-3d;
     position: relative;
