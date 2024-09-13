@@ -1,8 +1,8 @@
-This project was made with Laravel and React.
+This project was made with Laravel and React. \n
 Site was tested with OpenServer 6.0 and was local made on it.
 Were used: MySQL 8.2, PHP 8.2 .
 To use it, you need to have server with db and you need to have php, which is installed, to use command 'php artisan'.
-Also you need to instal NPM (Node Pakacge Manager).
+Also you need to install the NPM (Node Pakacge Manager).
 To turn on the website:
 1) Configurate your files about database (.env or config/database), also configurate another config (config/app, config/auth and ect.)
 2) Do not forget to change URL in the config/app
