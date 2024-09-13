@@ -1,4 +1,4 @@
-This project was made with Laravel and React. \n
+This project was made with Laravel and React.
 Site was tested with OpenServer 6.0 and was local made on it.
 Were used: MySQL 8.2, PHP 8.2 .
 To use it, you need to have server with db and you need to have php, which is installed, to use command 'php artisan'.
