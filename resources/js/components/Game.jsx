@@ -19,7 +19,6 @@ export default function Game(props) {
 
   const lastSession = 
     localStorage.getItem('sessionType'+props.type) ? JSON.parse(localStorage.getItem('sessionType'+props.type)) : {};
- 
   const [cards, setCards] = useState(() => {
     if(lastSession.cards)
       return lastSession.cards;
